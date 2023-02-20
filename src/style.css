@@ -1,0 +1,8 @@
+body {
+  background: url(body.jpg);
+  color: darkslategray;
+  font: 1.125rem/1.4 system-ui, sans-serif;
+  margin: auto;
+  max-width: 70ch;
+  text-align: justify;
+}
