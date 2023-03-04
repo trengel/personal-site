@@ -9,7 +9,13 @@ body {
 
 .avy {
   border-radius: 50%;
+  box-shadow: 0 0 0 4px oldlace,
+    0 0 0 8px bisque,
+    0 0 0 12px lightsalmon,
+    0 0 0 16px tomato,
+    0 0 0 20px indianred;
   float: right;
-  margin-left: 15px;
-  shape-outside: circle(50%);
+  height: 100px;
+  margin: 20px;
+  width: 100px;
 }
