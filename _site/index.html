@@ -6,7 +6,7 @@
   <title>Tristan Engel</title>
   <meta name="description" content="Tristan Engel's personal website">
   <meta name="color-scheme" content="dark light">
-  <link rel="icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAQAAADZc7J/AAAAIElEQVR42mNgGAWDDfwnEo4aMGrAqAGjBowEA0bBwAAARraOgF2Dq4IAAAAASUVORK5CYII=">
+  <link rel="icon" href="data:image/png;base64,AAABAAEAICAAAAAAIADJAwAAFgAAAIlQTkcNChoKAAAADUlIRFIAAAAgAAAAIAgGAAAAc3p69AAAA5BJREFUeJy9V0FoHFUY/v7/velMZtc0m00qLaKI4qkeykpPS+fStJ48CIooCD0q5qLgrZRebEQvQhDqpQdFPGoVQbctbLZd9mAuEXvwYAStwZK0iZnd2Z2Z934Pkw3pRtLturvfZeC9N//3ve//3/tnCANC5uZyYRjmkM+j3WxGs/X69iBxqN+F906fPqw6nbIC5gzRCYgcs8BjAEBETQLWGFgR4Jo4TvXw9esbQxHwT7k8C+a3GHiTiZ7RzDAiMCKQPUGYCBqAAZBY+ycRfRlbu1is1f4YWMBmufyaVuoDl/np2FokIgct34UmgsuM2Nq1xNqLU7Xa5UcS8FOp5Dzn+5cU83sA+ib+LyGaCG1rr0SuO3+0Umk+VICUSs6W71/OaX2uZQwGo36QIKcUwjS92mF+4/FqNdw7z70vbPn+pWGRA4AACI1BXuuXXGs/vdDD+YADm6dOveoQfZWK0DDIe4k8ZkTGzE/Vaov7BNwJgpm8yLJD9GQ8YM4fBk0EK3LfiJQKtdoqsMeOnMjbvlIjIweAVAQTShVA9H53jABg/eTJSeW6K4eYnxq04vuFIoIRuZ+k6fHZev0vBgDH88quUiMnBwAjggnmgtb6RWAnBVbkrB45dQ9EzgIAS5aGE2aM3Gnm9POrQeDx3SDIAThmx2B/FzZ7zOaTZJr9OPYB5O3Y6AERAQETcJzJ7jHsuy0PEyRC3CaKRKQ5TgVEBAHaINrmxXq9ScxrisYngQEIsFHsdDb4YlYTK2ps9NmVDKLb1GhEDAAK+HGcx3DH6wrQvYjiuNq2dk2PIQ0KQMuYkIi+3xUw1WjcI+ALl/d9HgwdrlIQ4OtCtfr7rgAASLX+pGXM3VG6oIjQMaZprV3oju0KmLlx404KnNdEI7sUXGYkIh8Wb936ZZ8AACguLX3WNuZKTg3/TOSUQsuY7wqt1sLe8X1JjzxvPkzTq3mlhuZETim0rK0x0TlaXk4OFHC0UmlGnvd6aMznHjP+T00oIvjMiKz9loCXJ6vV9d41B0WnzSB4R4tcOKRUsWMtTJ8dk4ngZT8m2xb46NcwXHihZ+f9CAAA/B0Ez/oi7xLwisM8A2T93CLrakB2tzOyHXNW6Vsg+iYR+Xh6aenng+L37e96EDzhiJwh4IwAxwU4AhF/ZzoionUmus3AtcSYH6Zu3vytn7gDJXg1CLwjSTJtHGcSAGIgLHY6G9RoRI8a61+4d3k2lCwNxQAAAABJRU5ErkJggg==">
   <!-- og tags -->
   <meta property="og:title" content="Tristan Engel">
   <meta property="og:description" content="Tristan Engel's personal website">
@@ -138,83 +138,16 @@ $images_to_base64 = false;</code></pre>
 </li>
 </ol>
 </div><hr></section>
-    <section tabindex="0" role="document" aria-label="Structuring Blog Posts" id="structure"><h1>Structuring Blog Posts</h1>
-<p>Blog posts should be placed into the <code>/content</code> directory and be named based only on their post date. See an example here:</p>
-<pre><code class="markdown">2048-01-01.md</code></pre>
-<p>PHPetite will create a <code>target</code> by appending the page title inside the article to the file's date name. So a markdown file with the following content:</p>
-<pre><code class="markdown"># Bladerunner Rocks
-
-Bladerunner is amazing because blah blah blah...</code></pre>
-<p>will render out the <code>target</code> link as:</p>
-<pre><code class="markdown">example.com/#2048-01-01-bladerunner-rocks</code></pre></section><section tabindex="0" role="document" aria-label="Requirements" id="requirements"><h1>Requirements</h1>
-<ol>
-<li><code>PHP 7.3</code> or higher</li>
-<li>If using Linux, you will require the following packages in order to convert your images to base64 encoding:<ul>
-<li>PHP XML -&gt; <code>sudo apt-get install php-xml</code></li>
-<li>PHP mbstring -&gt; <code>sudo apt-get install php-mbstring</code></li>
-</ul>
-</li>
-</ol>
-<p>That's really it!</p></section><section tabindex="0" role="document" aria-label="Generating This Blog" id="generating-this-blog"><h1>Generating This Blog</h1>
-<p><strong>Important</strong>: Before building and uploading your single file blog, be sure to edit all the proper details found inside the <code>_phpetite/_config.php</code> file. This includes your domain, site title, author name, etc. </p>
-<p>Most users won't ever need to fiddle with the other files inside the <code>_phpetite</code> directory.</p>
-<hr>
-<p>Get <a href="https://git.sr.ht/~bt/phpetite" title="PHPetite at sourcehut">PHPetite</a> in order to convert a collection of Markdown files into a single <abbr title="Hyper Text Markup Language">HTML</abbr> file with inline <abbr title="Cascading Style Sheets">CSS</abbr>.</p>
-<ol>
-<li>Make proper edits to the <code>/_phpetite/_config.php</code> file</li>
-<li>Write posts in <code>/content</code></li>
-<li>(Optional) include any images under the <code>/content/img/</code> directory</li>
-<li>From the command-line run:</li>
-</ol>
-<pre><code class="shell">make</code></pre>
-<p>This will generate both the single file <abbr title="Hyper Text Markup Language">HTML</abbr> page, along with an <code>atom.xml</code> file for the use of an optional RSS feed.</p>
-<p>These two files are output into the <code>_site</code> directory.</p>
-<h2>Looking for more advanced options?</h2>
+    <section tabindex="0" role="document" aria-label="Right now, I am&hellip;" id="now"><h1>Right now, I am&hellip;</h1>
 <ul>
-<li><a href="#adding-pages">Adding Custom Pages</a></li>
-<li><a href="#2021-02-07-converting-from-jekyll">Converting from Jekyll</a></li>
-</ul></section><section tabindex="0" role="document" aria-label="Adding Custom Pages" id="adding-pages"><h1>Adding Custom Pages</h1>
-<p>To add your own custom pages, simply create a Markdown file under the <code>content/_pages</code> directory. PHPetite will take it from there!</p>
-<h2>Some Caveats</h2>
-<p>Any page you create will be automatically added to the <code>footer</code> navigation section. If you wish to hide individual pages from showing in the <code>footer</code>, do so via CSS:</p>
-<pre><code class="css">footer a.slug-name-of-your-page {
-    display: none;
-}</code></pre>
-<p>If you want to remove the <code>footer</code> navigation altogether, add the following to your <code>style.css</code> file:</p>
-<pre><code class="css">footer .footer-links {
-    display: none;
-}</code></pre></section><section tabindex="0" role="document" aria-label="About PHPetite" id="about"><h1>About PHPetite</h1>
-<p>This entire website is a single <abbr title="Hyper Text Markup Language">HTML</abbr> file. It was generated by <a href="https://git.sr.ht/~bt/phpetite">PHPetite</a> and hosted on <a href="https://srht.site/">sourcehut pages</a>.</p>
-<p>If you notice any issues or want to help make this project even better, <a href="https://git.sr.ht/~bt/phpetite">check it out on sourcehut</a>.</p>
-<h2>Feature Wishlist</h2>
-<p>&#9744; Implement a "watch" system for local development (auto-rebuilds)<br>
-&#9744; Detailed documentation for converting existing static sites to PHPetite<br>
-&#9744; More theme / styling options!<br>
-&#9744; Proper accessibility audit<br>
-&#9745; <del>Allow custom fonts to be set as Base64 strings</del> (<a href="#2021-02-27-converting-custom-fonts-to-base64-strings">details here</a>)<br>
-&#9745; <del>Set images as inline Base64 strings</del><br>
-&#9745; <del>Basic RSS feed</del><br>
-&#9745; <del>Automatically add new pages to footer nav</del><br>
-&#9745; <del>Compress inline CSS</del></p></section>
+<li>Preparing for the CompTIA A+ Core 1 exam.</li>
+<li>Playing <a href="https://www.dekudeals.com/collection/th9ntfh4tb">Metroid Prime Remastered</a>.</li>
+<li>Reading <em><a href="https://isbnsearch.org/isbn/9780394757643">Trouble Is My Business</a></em>. I've been on a detective fiction kick lately.</li>
+<li>Fussing with this website.</li>
+</ul></section>
     <section tabindex="0" role="document" aria-label="Home" id="home">
-      <div class="site-info"><h1>A Single File Blog</h1>
-<p>PHPetite (/p/h/p&#601;&#712;t&#275;t/) is a single file, static blog generated from PHP. Based off the very minimal and awesome <a target="_blank" href="https://github.com/cadars/portable-php">portable-php</a></p>
-<h2>Key Features</h2>
-<ul>
-<li>Entire blog is rendered in a single HTML file</li>
-<li>Inline, compressed CSS</li>
-<li>All images converted into base64 encoding</li>
-<li>Minimal requirements / no heavy build tools</li>
-</ul>
-<hr>
-<p>Feel free to look through the documentation found posted on this site or directly in the github repo.</p>
-<h2>Getting Started</h2>
-<ul>
-<li><a href="#requirements">Requirements</a></li>
-<li><a href="#generating-this-blog">Generating This Blog</a></li>
-<li><a href="#structure">Structuring Blog Posts</a></li>
-<li><a href="#adding-pages">Adding Custom Pages</a></li>
-</ul></div><hr>
+      <div class="site-info"><h1>Welcome</h1>
+<p>Thanks for stopping by. I'm Tristan Engel, an aspiring IT professional, reluctant techie and hobbyist web developer. I'm currently looking for a job in IT support, but nevermind telling you what I do for work&mdash;that's what my <a href="https://www.linkedin.com/in/trengel/">LinkedIn profile</a> is for. My hope is that this site will suffice for any other social media presence. If you want to get to know me a little more, you can see what I'm doing <a href="#now">right now</a>.</p></div><hr>
       <nav>
         <ul class="toc">
           <li><a href="#2022-06-28-cleaning-things-up-future-phpetite-updates"><span> Cleaning Things Up &amp; Future PHPetite Updates</span></a> <time datetime="2022-06-28">2022-06-28</time></li><li><a href="#2021-02-27-converting-custom-fonts-to-base64-strings"><span> Converting Custom Fonts to Base64 Strings</span></a> <time datetime="2021-02-27">2021-02-27</time></li><li><a href="#2021-02-18-disable-image-to-base64-conversion"><span> Disable Image to Base64 Conversion</span></a> <time datetime="2021-02-18">2021-02-18</time></li><li><a href="#2021-02-08-automatic-rss"><span> Automatic RSS</span></a> <time datetime="2021-02-08">2021-02-08</time></li><li><a href="#2021-02-07-the-benefits-of-a-single-file-blog"><span> The Benefits of a Single File Blog</span></a> <time datetime="2021-02-07">2021-02-07</time></li><li><a href="#2021-02-06-converting-from-jekyll"><span> Converting from Jekyll</span></a> <time datetime="2021-02-06">2021-02-06</time></li><li><a href="#2021-01-09-markdown-examples"><span> Markdown examples</span></a> <time datetime="2021-01-09">2021-01-09</time></li>
@@ -225,7 +158,7 @@ Bladerunner is amazing because blah blah blah...</code></pre>
   <footer>
     <small>Last updated on March 12, 2023</small>
     <div class="footer-links">
-        <small><a class="structure" href="#structure">Structuring Blog Posts</a><span class="divider">/</span><a class="requirements" href="#requirements">Requirements</a><span class="divider">/</span><a class="home-content" href="#home-content">A Single File Blog</a><span class="divider">/</span><a class="generating-this-blog" href="#generating-this-blog">Generating This Blog</a><span class="divider">/</span><a class="adding-pages" href="#adding-pages">Adding Custom Pages</a><span class="divider">/</span><a class="about" href="#about">About PHPetite</a><span class="divider">/</span></small>
+        <small><a class="now" href="#now">Right now, I am&hellip;</a><span class="divider">/</span><a class="home-content" href="#home-content">Welcome</a><span class="divider">/</span></small>
     </div>
   </footer>
 </body>

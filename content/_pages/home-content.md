@@ -1,21 +1,3 @@
-# A Single File Blog
+# Welcome
 
-PHPetite (/p/h/pəˈtēt/) is a single file, static blog generated from PHP. Based off the very minimal and awesome <a target="_blank" href="https://github.com/cadars/portable-php">portable-php</a>
-
-## Key Features
-
-- Entire blog is rendered in a single HTML file
-- Inline, compressed CSS
-- All images converted into base64 encoding
-- Minimal requirements / no heavy build tools
-
----
-
-Feel free to look through the documentation found posted on this site or directly in the github repo.
-
-## Getting Started
-
-- [Requirements](#requirements)
-- [Generating This Blog](#generating-this-blog)
-- [Structuring Blog Posts](#structure)
-- [Adding Custom Pages](#adding-pages)
+Thanks for stopping by. I'm Tristan Engel, an aspiring IT professional, reluctant techie and hobbyist web developer. I'm currently looking for a job in IT support, but nevermind telling you what I do for work—that's what my [LinkedIn profile](https://www.linkedin.com/in/trengel/) is for. My hope is that this site will suffice for any other social media presence. If you want to get to know me a little more, you can see what I'm doing [right now](#now).
